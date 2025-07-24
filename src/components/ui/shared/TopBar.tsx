@@ -26,7 +26,7 @@ const TopBar = () => {
           
         </Button>
         <Link to={`/profile/${user.id}`}>
-         <img src={user.imageUrl} alt="" height={30} width={30} className='rounded-full'/>
+         <img src={user.imageUrl} alt="" height={30} width={30} className='rounded-full aspect-square'/>
          </Link>
       </div>
     </section>

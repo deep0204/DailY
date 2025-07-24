@@ -23,7 +23,7 @@ const LeftSideBar = () => {
     <div className='leftsidebar'>
       <div className='flex flex-col gap-8'>
         <Link to="/">
-          <img src="/assets/images/logo1.png" alt="" height={30} width={150}/>
+          <img src="/assets/images/logo1.png" alt="" width={100}/>
         </Link>
         <Link to={`/profile/${user.id}`} className='flex flex-row items-center gap-2'>
           <img src={user.imageUrl} alt="" height={50} width={50} className='rounded-full object-cover aspect-square' />

@@ -19,7 +19,7 @@ const TopBar = () => {
   return (
     
     <section className='topbar flex-between px-5 py-4'>
-      <Link to="/"><img src="/assets/images/logo1.png" alt="profileImage" height={40} width={120.5} /></Link>
+      <Link to="/"><img src="/assets/images/logo1.png" alt="profileImage" height={40} width={100} /></Link>
       <div className='flex flex-row items-center'>
         <Button onClick={()=>signOut()}>
           <img src="/assets/icons/logout.svg" alt="logout" className='mr-2' />

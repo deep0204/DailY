@@ -54,7 +54,7 @@ const Signupform = () => {
 
     <Form {...form}>
       <div className='max-w-[250px] sm:max-w-[420px] mx-auto flex-center flex-col py-5 ' >
-        <img src="/assets/images/logo1.png" alt="logo" height={30} />
+        <img src="/assets/images/logo1.png" alt="logo" height={30} width={150} />
 
 
         <h1 className='h3-bold  py-5 sm:py-15 text-center '>Create new Account</h1>

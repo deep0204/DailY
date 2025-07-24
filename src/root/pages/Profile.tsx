@@ -1,7 +1,7 @@
 import React from 'react'
 import { useAuthContext } from '../../context/AuthContext';
 import { QueryKeys } from '@/lib/react-query/queryKeys';
-import { useGetUserById, useGetUserPosts } from '@/lib/react-query/queries&mutation';
+import { useGetCurrentUser, useGetUserById, useGetUserPosts } from '@/lib/react-query/queries&mutation';
 import { useParams } from 'react-router-dom';
 import { Models } from 'appwrite';
 import GridPosts from '@/components/ui/shared/GridPosts';
@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 
 const Profile = () => {
   const {id} = useParams();
+  const {data:currentUser} = useGetCurrentUser();
   const {data:user,isPending:isLoadingUser} = useGetUserById(id||'');
   const {data:posts,isPending:isGettingPosts} = useGetUserPosts(id||'')
   if(posts)console.log(posts)
@@ -50,7 +51,8 @@ const Profile = () => {
           </div>
 
       </div>
-      <div>
+      <div className={`${currentUser?.$id!==user?.$id && "hidden"}`}>
+        
         <Link to={`/update-profile/${user?.$id}`} >
       <Button className='flex flex-row shad-button_dark_4'>
       <img src="/assets/icons/edit.svg" alt="" width={25} />

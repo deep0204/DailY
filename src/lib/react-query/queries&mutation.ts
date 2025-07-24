@@ -165,6 +165,7 @@ export const useGetInfinitePosts = () => {
             return lastId;
         },
         refetchOnMount: "always",
+        initialPageParam:''
     })
 }
 export const useSearchPosts = (searchTerm:string) => {
